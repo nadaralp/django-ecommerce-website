@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Required for all auth
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -62,7 +63,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
-VENV_PATH = os.path.dirname(BASE_DIR)
+VENV_PATH = os.path.join(BASE_DIR, '../', 'virtual_env')
 STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(VENV_PATH, 'media')
